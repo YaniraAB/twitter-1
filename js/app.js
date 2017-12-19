@@ -1,6 +1,6 @@
 window.onload=function(){
   sendtweet();
-  count();
+  /*count();*/
 }
 
 var button = document.getElementById('submit');
@@ -20,7 +20,7 @@ function sendtweet (){
     }
   });
 }
-function count (){
+/*function count (){
   textarea.addEventListener ('keyup', function (){
     var letras = textarea.value.length;
     contador.textContent = max - letras;
@@ -39,4 +39,11 @@ function count (){
       button.style.backgroundColor = '#4ab3f4';
     }
   });
-}
+}*/
+
+/*J query - contador*/
+var numberCount = $('#number').text();
+$('#textbox').keypress(function() {
+  $.letters = $('#textbox').val().length + 1;
+  $('#number').text(numberCount-$.letters);
+}); 
